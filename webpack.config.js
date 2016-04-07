@@ -7,8 +7,6 @@
 
 var webpack = require('webpack')
 
-var id = process.env.GH_BASIC_CLIENT_ID
-var secret = process.env.GH_BASIC_SECRET_ID
 var node_env = process.env.NODE_ENV
 
 module.exports = {

@@ -2,8 +2,8 @@ export default ({
     transparentBg: {
         background: 'transparent'
     },
-    space: {
-    	marginTop: '25px'
+    space8: {
+    	marginTop: '8px'
     },
     container: {
     	position: 'fixed',
