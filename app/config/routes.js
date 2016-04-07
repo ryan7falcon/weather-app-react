@@ -8,7 +8,7 @@ import Hello from '../components/Hello'
 var routes = (
 		<Route path="/" component={Main}>
 			<IndexRoute component={Home}/>
-            <Route path="hello" component={Hello}/>
+      <Route path="hello" component={Hello}/>
 		</Route>
 	);
 
