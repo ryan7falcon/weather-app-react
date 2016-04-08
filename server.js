@@ -50,7 +50,7 @@ function renderPage(appHtml) {
     <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.2/css/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.2/js/bootstrap.min.js">
     <div id=app>${appHtml}</div>
-    <script src="bundle.js"></script>
+    <script src="/bundle.js"></script>
    `
 }
 
