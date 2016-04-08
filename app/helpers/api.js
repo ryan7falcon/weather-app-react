@@ -38,9 +38,6 @@ function getForcast (city) {
   var url = prepUrl('forecast/daily', queryStringData)
 
   return axios.get(url)
-    .then(function (forecastData) {
-      console.log(forecastData.data)
-    })
 }
 
 module.exports = {
