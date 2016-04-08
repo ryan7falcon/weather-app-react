@@ -20,14 +20,14 @@ export default React.createClass({
     getForcast(this.state.city)
       .then(function (weather) {
         this.setState({
-          weather: weather.data.list,
+          weather: weather.data,
           isLoading: false
         })
       }.bind(this))
   },
   render() {
     return (
-        <Forecast isLoading={this.state.isLoading} city={this.state.city} weather={this.state.weather}/>
+        <Forecast isLoading={this.state.isLoading} weather={this.state.weather}/>
     )}
 })
 
