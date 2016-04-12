@@ -29,7 +29,8 @@ export default React.createClass({
     this.context.router.push({
       pathname: '/detail/' + this.state.city,
       state: {
-        weather: weather
+        weather: weather,
+        city: this.state.city
       }
     });
   },
