@@ -1,5 +1,4 @@
 import React from 'react';
-import styles from '../styles'
 
 export default React.createClass({
 	propTypes: {
@@ -42,11 +41,11 @@ export default React.createClass({
 
     render() {
         return (
-            <div style={styles.container} styles>
-	             <p style={styles.content}>
+
+	             <p>
 		             {this.state.text}
 	             </p>
-             </div>
+
         );
     }
 })

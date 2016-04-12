@@ -13,21 +13,21 @@ export default React.createClass({
     return{
       isLoading: true,
       city: this.props.routeParams.city,
-      weather: {}
+      forecast: {}
     }
   },
   componentDidMount() {
     getForcast(this.state.city)
-      .then(function (weather) {
+      .then(function (forecast) {
         this.setState({
-          weather: weather.data,
+          forecast: forecast.data,
           isLoading: false
         })
       }.bind(this))
   },
   render() {
     return (
-        <Forecast isLoading={this.state.isLoading} weather={this.state.weather}/>
+        <Forecast isLoading={this.state.isLoading} forecast={this.state.forecast}/>
     )}
 })
 
