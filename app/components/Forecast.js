@@ -53,8 +53,15 @@ function Forecast(props) {
     )
   }
 
-  console.log(props.forecast)
+  return (
+    <ForecastUI
+              forecast={props.forecast}
+              handleClick={props.handleClick} />
+    )
 
+}
+
+function ForecastUI(props){
   return (
     <div>
 
@@ -63,21 +70,20 @@ function Forecast(props) {
       <div style={styles.container}>
         {
           props.forecast.list.map(function(listItem) {
-            return <DayItem key={listItem.dt} day={listItem} />
+            return <DayItem key={listItem.dt} day={listItem} handleClick={props.handleClick.bind(null, listItem)} />
           })
         }
       </div>
 
     </div>
     )
-
 }
 
 function DayItem(props){
   var icon = props.day.weather[0].icon;
   var date = getDate(props.day.dt);
   return (
-    <div style={styles.dayContainer} >
+    <div style={styles.dayContainer} onClick={props.handleClick}>
       <img style={styles.weather} src={'/images/weather-icons/' + icon + '.svg'} alt='Weather' />
       <h2 style={styles.subheader}>{date}</h2>
     </div>
@@ -88,6 +94,7 @@ Forecast
 .propTypes = {
   isLoading: React.PropTypes.bool.isRequired,
   forecast: React.PropTypes.object.isRequired,
+  handleClick: React.PropTypes.func.isRequired,
 }
 
 module.exports = Forecast

@@ -25,9 +25,17 @@ export default React.createClass({
         })
       }.bind(this))
   },
+  showDetails(weather){
+    this.context.router.push({
+      pathname: '/detail/' + this.state.city,
+      state: {
+        weather: weather
+      }
+    });
+  },
   render() {
     return (
-        <Forecast isLoading={this.state.isLoading} forecast={this.state.forecast}/>
+        <Forecast isLoading={this.state.isLoading} forecast={this.state.forecast} handleClick={this.showDetails}/>
     )}
 })
 
